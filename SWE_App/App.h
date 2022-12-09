@@ -6,7 +6,7 @@
 class App : public wxApp
 {
 	Window* window = nullptr;
-	//are the pushes working correctly
+	
 public:
 	virtual bool OnInit();
 };
