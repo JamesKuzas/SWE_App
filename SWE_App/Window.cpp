@@ -1,5 +1,10 @@
 #include "Window.h"
 
+wxBEGIN_EVENT_TABLE(Window, wxFrame)
+EVT_BUTTON(1, Window::OnButtonClick)
+
+wxEND_EVENT_TABLE()
+
 Window::Window() : 
 	wxFrame(nullptr, 0, "Calculator", wxPoint(400,200), wxSize(400,400))
 {
@@ -30,4 +35,14 @@ Window::Window() :
 	zeroButton = new wxButton(this, 19, "0", wxPoint(100, 305), wxSize(95, 55));
 	dotButton = new wxButton(this, 20, ".", wxPoint(200, 305), wxSize(95, 55));
 	equalButton = new wxButton(this, 21, "=", wxPoint(310, 305), wxSize(70, 55));
+}
+
+void Window::OnButtonClick(wxCommandEvent& evt)
+{
+	int id = evt.GetId();
+	switch (id)
+	{
+	default:
+		break;
+	}
 }
