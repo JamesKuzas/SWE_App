@@ -1,6 +1,7 @@
 #include "Window.h"
 
 wxBEGIN_EVENT_TABLE(Window, wxFrame)
+
 EVT_BUTTON(1, Window::OnButtonClick)
 EVT_BUTTON(2, Window::OnButtonClick)
 EVT_BUTTON(3, Window::OnButtonClick)
@@ -24,13 +25,12 @@ EVT_BUTTON(20, Window::OnButtonClick)
 EVT_BUTTON(21, Window::OnButtonClick)
 EVT_BUTTON(22, Window::OnButtonClick)
 
-
 wxEND_EVENT_TABLE()
 
 Window::Window() : 
 	wxFrame(nullptr, 0, "Calculator", wxPoint(400,200), wxSize(400,460))
 {
-	textBox = new wxTextCtrl(this, 25, "", wxPoint(0, 0), wxSize(400, 55));
+	textBox = new wxTextCtrl(this, 23, "", wxPoint(0, 0), wxSize(400, 55));
 
 	cosButton = new wxButton(this, 1, "Cos", wxPoint(0, 60), wxSize(70, 55));
 	sinButton = new wxButton(this, 2, "Sin", wxPoint(75, 60), wxSize(70, 55));
@@ -98,7 +98,7 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		textBox->AppendText("6");
 		break;
 	case 13:
-		textBox->AppendText("x");
+		textBox->AppendText("*");
 		break;
 	case 14:
 		textBox->AppendText("1");
@@ -123,7 +123,7 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 21:
 		break;
 	case 22:
-		textBox->AppendText("+");
+		
 		break;
 
 
