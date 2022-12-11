@@ -73,8 +73,10 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 3:
 		break;
 	case 4:
+		textBox->Clear();
 		break;
 	case 5:
+		
 		break;
 	case 6:
 		textBox->AppendText("7");
@@ -123,7 +125,9 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 21:
 		break;
 	case 22:
-		
+		value = textBox->GetValue();
+		plus = true;
+		first = wxAtof(value);
 		break;
 
 

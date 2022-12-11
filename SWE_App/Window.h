@@ -28,7 +28,15 @@ class Window :public wxFrame
 	wxButton* dotButton = nullptr;
 	wxTextCtrl* textBox = nullptr;
 
-
+	float answer = NULL;
+	float first = NULL;
+	float second = NULL;
+	bool plus = false;
+	bool minus = false;
+	bool divide = false;
+	bool multiply = false;
+	wxString answer;
+	wxString value;
 
 public:
 	Window();
