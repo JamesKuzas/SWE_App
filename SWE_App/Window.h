@@ -35,8 +35,9 @@ class Window :public wxFrame
 	bool minus = false;
 	bool divide = false;
 	bool multiply = false;
-	wxString answer;
-	wxString value;
+	wxString value = "";
+	wxString answerString;
+	
 
 public:
 	Window();

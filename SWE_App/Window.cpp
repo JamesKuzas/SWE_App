@@ -72,8 +72,10 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		break;
 	case 3:
 		break;
-	case 4:
+	case 4://CLEAR
 		textBox->Clear();
+		value.Clear();
+		answerString.Clear();
 		break;
 	case 5:
 		
@@ -87,8 +89,12 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 8:
 		textBox->AppendText("9");
 		break;
-	case 9:
-		textBox->AppendText("/");
+	case 9://Divide
+		divide = true;
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		value = "";
+		textBox->Clear();
 		break;
 	case 10:
 		textBox->AppendText("4");
@@ -99,8 +105,12 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 12:
 		textBox->AppendText("6");
 		break;
-	case 13:
-		textBox->AppendText("*");
+	case 13://Multiply
+		multiply = true;
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		value = "";
+		textBox->Clear();
 		break;
 	case 14:
 		textBox->AppendText("1");
@@ -111,8 +121,12 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 16:
 		textBox->AppendText("3");
 		break;
-	case 17:
-		textBox->AppendText("-");
+	case 17://Subtract
+		minus = true;
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		value = "";
+		textBox->Clear();
 		break;
 
 	case 18:
@@ -122,20 +136,67 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		break;
 	case 20:
 		break;
-	case 21:
-		break;
-	case 22:
+	case 21:// Equal
 		value = textBox->GetValue();
-		plus = true;
-		first = wxAtof(value);
+		second = wxAtof(value);
+		answer = 0;
+		if (plus == true)
+		{
+			answer = first + second;
+			answerString << answer;
+			textBox->Clear();
+			textBox->AppendText(answerString);
+			value.Clear();
+			answerString.Clear();
+			first = NULL;
+			second = NULL;
+			plus = false;
+		}
+		if (minus == true)
+		{
+			answer = first - second;
+			answerString << answer;
+			textBox->Clear();
+			textBox->AppendText(answerString);
+			value.Clear();
+			answerString.Clear();
+			first = NULL;
+			second = NULL;
+			minus = false;
+		}
+		if (multiply == true)
+		{
+			answer = first * second;
+			answerString << answer;
+			textBox->Clear();
+			textBox->AppendText(answerString);
+			value.Clear();
+			answerString.Clear();
+			first = NULL;
+			second = NULL;
+			multiply = false;
+		}
+		if (divide == true)
+		{
+			answer = first / second;
+			answerString << answer;
+			textBox->Clear();
+			textBox->AppendText(answerString);
+			value.Clear();
+			answerString.Clear();
+			first = NULL;
+			second = NULL;
+			divide = false;
+		}
+		
 		break;
-
-
-
-
-
-
-
+	case 22://ADD
+		plus = true;
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		value = "";
+		textBox->Clear();
+		break;
 	default:
 		break;
 	}
