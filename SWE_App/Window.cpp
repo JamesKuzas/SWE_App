@@ -30,11 +30,15 @@ wxEND_EVENT_TABLE()
 Window::Window() : 
 	wxFrame(nullptr, 0, "Calculator", wxPoint(400,200), wxSize(400,460))
 {
+	
 	textBox = new wxTextCtrl(this, 23, "", wxPoint(0, 0), wxSize(400, 55));
 
 	cosButton = new wxButton(this, 1, "Cos", wxPoint(0, 60), wxSize(70, 55));
+	cosButton->Enable(f);
 	sinButton = new wxButton(this, 2, "Sin", wxPoint(75, 60), wxSize(70, 55));
+	sinButton->Enable(f);
 	tanButton = new wxButton(this, 3, "Tan", wxPoint(150, 60), wxSize(70, 55));
+	tanButton->Enable(f);
 	clearButton = new wxButton(this, 4, "C", wxPoint(225, 60), wxSize(70, 55));
 	backButton = new wxButton(this, 5, "<x", wxPoint(310, 60), wxSize(60, 55));
 
@@ -54,6 +58,7 @@ Window::Window() :
 	minusButton = new wxButton(this, 17, "-", wxPoint(310, 245), wxSize(60, 55));
 
 	reverseButton = new wxButton(this, 18, "+/-", wxPoint(0, 335), wxSize(95, 65));
+	reverseButton->Enable(f);
 	zeroButton = new wxButton(this, 19, "0", wxPoint(100, 335), wxSize(95, 65));
 	dotButton = new wxButton(this, 20, ".", wxPoint(200, 335), wxSize(95, 65));
 	equalButton = new wxButton(this, 21, "=", wxPoint(310, 365), wxSize(60, 55));
@@ -66,18 +71,22 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	int id = evt.GetId();
 	switch (id)
 	{
-	case 1:
+	case 1://Cos
+		
 		break;
-	case 2:
+	case 2://Sin
+
 		break;
-	case 3:
+	case 3://Tan
+
 		break;
 	case 4://CLEAR
 		textBox->Clear();
 		value.Clear();
 		answerString.Clear();
 		break;
-	case 5:
+	case 5://BackButton
+		
 		
 		break;
 	case 6:
@@ -134,7 +143,8 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	case 19:
 		textBox->AppendText("0");
 		break;
-	case 20:
+	case 20://Dot
+		textBox->AppendText(".");
 		break;
 	case 21:// Equal
 		value = textBox->GetValue();

@@ -28,6 +28,7 @@ class Window :public wxFrame
 	wxButton* dotButton = nullptr;
 	wxTextCtrl* textBox = nullptr;
 
+	float f = false;
 	float answer = NULL;
 	float first = NULL;
 	float second = NULL;
