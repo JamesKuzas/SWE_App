@@ -86,7 +86,10 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		answerString.Clear();
 		break;
 	case 5://BackButton
-		
+		value = textBox->GetValue();
+		value.RemoveLast();
+		textBox->Clear();
+		textBox->AppendText(value);
 		
 		break;
 	case 6:
