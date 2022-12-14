@@ -24,7 +24,7 @@ class Window :public wxFrame
 	wxButton* minusButton = nullptr;
 	wxButton* plusButton = nullptr;
 	wxButton* equalButton = nullptr;
-	wxButton* reverseButton = nullptr;
+	wxButton* modButton = nullptr;
 	wxButton* dotButton = nullptr;
 	wxTextCtrl* textBox = nullptr;
 
@@ -43,6 +43,9 @@ class Window :public wxFrame
 public:
 	Window();
 	void OnButtonClick(wxCommandEvent& evt);
+	float CosProblem(float _value);
+	float SinProblem(float _value);
+	float TanProblem(float _value);
 	wxDECLARE_EVENT_TABLE();
 };
 

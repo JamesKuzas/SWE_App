@@ -34,11 +34,8 @@ Window::Window() :
 	textBox = new wxTextCtrl(this, 23, "", wxPoint(0, 0), wxSize(400, 55));
 
 	cosButton = new wxButton(this, 1, "Cos", wxPoint(0, 60), wxSize(70, 55));
-	cosButton->Enable(f);
 	sinButton = new wxButton(this, 2, "Sin", wxPoint(75, 60), wxSize(70, 55));
-	sinButton->Enable(f);
 	tanButton = new wxButton(this, 3, "Tan", wxPoint(150, 60), wxSize(70, 55));
-	tanButton->Enable(f);
 	clearButton = new wxButton(this, 4, "C", wxPoint(225, 60), wxSize(70, 55));
 	backButton = new wxButton(this, 5, "<x", wxPoint(310, 60), wxSize(60, 55));
 
@@ -57,8 +54,8 @@ Window::Window() :
 	threeButton = new wxButton(this, 16, "3", wxPoint(200, 265), wxSize(95, 65));
 	minusButton = new wxButton(this, 17, "-", wxPoint(310, 245), wxSize(60, 55));
 
-	reverseButton = new wxButton(this, 18, "+/-", wxPoint(0, 335), wxSize(95, 65));
-	reverseButton->Enable(f);
+	modButton = new wxButton(this, 18, "Mod", wxPoint(0, 335), wxSize(95, 65));
+	modButton->Enable(f);
 	zeroButton = new wxButton(this, 19, "0", wxPoint(100, 335), wxSize(95, 65));
 	dotButton = new wxButton(this, 20, ".", wxPoint(200, 335), wxSize(95, 65));
 	equalButton = new wxButton(this, 21, "=", wxPoint(310, 365), wxSize(60, 55));
@@ -72,13 +69,28 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	switch (id)
 	{
 	case 1://Cos
-		
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		answer = CosProblem(first);
+		answerString << answer;
+		textBox->Clear();
+		textBox->AppendText(answerString);
 		break;
 	case 2://Sin
-
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		answer = SinProblem(first);
+		answerString << answer;
+		textBox->Clear();
+		textBox->AppendText(answerString);
 		break;
 	case 3://Tan
-		
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		answer = TanProblem(first);
+		answerString << answer;
+		textBox->Clear();
+		textBox->AppendText(answerString);
 		break;
 	case 4://CLEAR
 		textBox->Clear();
@@ -213,4 +225,22 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 	default:
 		break;
 	}
+}
+
+float Window::CosProblem(float _value)
+{
+	float c = cos(_value);
+	return c;
+}
+
+float Window::SinProblem(float _value)
+{
+	float s = sin(_value);
+	return s;
+}
+
+float Window::TanProblem(float _value)
+{
+	float t = tan(_value);
+	return t;
 }
