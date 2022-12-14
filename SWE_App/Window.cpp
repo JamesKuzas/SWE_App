@@ -78,7 +78,7 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 
 		break;
 	case 3://Tan
-
+		
 		break;
 	case 4://CLEAR
 		textBox->Clear();
