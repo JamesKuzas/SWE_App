@@ -4,6 +4,8 @@
 
 class Window :public wxFrame
 {
+	ButtonFactory* factory = new ButtonFactory();
+
 	wxButton* nineButton = nullptr;
 	wxButton* eightButton = nullptr;
 	wxButton* sevenButton = nullptr;
