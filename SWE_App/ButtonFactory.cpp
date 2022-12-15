@@ -33,6 +33,34 @@ ButtonFactory::ButtonFactory():
 	plusBUtton = new wxButton(this, 22, "+", wxPoint(310, 305), wxSize(60, 55));
 }
 
+std::vector<wxButton*> ButtonFactory::Buttons()
+{
+	std::vector<wxButton*> v;
+	v.push_back(nineBUtton);
+	v.push_back(eightBUtton);
+	v.push_back(sevenBUtton);
+	v.push_back(sixBUtton);
+	v.push_back(fiveBUtton);
+	v.push_back(fourBUtton);
+	v.push_back(threeBUtton);
+	v.push_back(twoBUtton);
+	v.push_back(oneBUtton);
+	v.push_back(zeroBUtton);
+	v.push_back(cosBUtton);
+	v.push_back(tanBUtton);
+	v.push_back(sinBUtton);
+	v.push_back(clearBUtton);
+	v.push_back(backBUtton);
+	v.push_back(divideBUtton);
+	v.push_back(multiBUtton);
+	v.push_back(minusBUtton);
+	v.push_back(plusBUtton);
+	v.push_back(equalBUtton);
+	v.push_back(modBUtton);
+	v.push_back(dotBUtton);
+	return v;
+}
+
 wxButton* ButtonFactory::NineButton()
 {
 	return nineBUtton;

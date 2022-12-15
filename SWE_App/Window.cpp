@@ -31,7 +31,7 @@ Window::Window() :
 	wxFrame(nullptr, 0, "Calculator", wxPoint(400,200), wxSize(400,460))
 {
 	textBox = factory->TextBox();
-	nineButton = factory->NineButton();
+	
 	
 }
 

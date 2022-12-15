@@ -29,6 +29,7 @@ class ButtonFactory :public wxFrame
 	
 public:
 	ButtonFactory();
+	std::vector<wxButton*> Buttons();
 	wxButton* NineButton();
 	wxButton* EightButton();
 	wxButton* SevenButton();
