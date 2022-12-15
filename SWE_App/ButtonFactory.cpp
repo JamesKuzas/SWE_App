@@ -3,176 +3,118 @@
 ButtonFactory::ButtonFactory():
 	wxFrame(nullptr, 0, "Calculator", wxPoint(400, 200), wxSize(400, 460))
 {
-	textBoX = new wxTextCtrl(this, 23, "", wxPoint(0, 0), wxSize(400, 55));
-
-	cosBUtton = new wxButton(this, 1, "Cos", wxPoint(0, 60), wxSize(70, 55));
-	sinBUtton = new wxButton(this, 2, "Sin", wxPoint(75, 60), wxSize(70, 55));
-	tanBUtton = new wxButton(this, 3, "Tan", wxPoint(150, 60), wxSize(70, 55));
-	clearBUtton = new wxButton(this, 4, "C", wxPoint(225, 60), wxSize(70, 55));
-	backBUtton = new wxButton(this, 5, "<x", wxPoint(310, 60), wxSize(60, 55));
-
-	sevenBUtton = new wxButton(this, 6, "7", wxPoint(0, 125), wxSize(95, 65));
-	eightBUtton = new wxButton(this, 7, "8", wxPoint(100, 125), wxSize(95, 65));
-	nineBUtton = new wxButton(this, 8, "9", wxPoint(200, 125), wxSize(95, 65));
-	divideBUtton = new wxButton(this, 9, "/", wxPoint(310, 125), wxSize(60, 55));
-
-	fourBUtton = new wxButton(this, 10, "4", wxPoint(0, 195), wxSize(95, 65));
-	fiveBUtton = new wxButton(this, 11, "5", wxPoint(100, 195), wxSize(95, 65));
-	sixBUtton = new wxButton(this, 12, "6", wxPoint(200, 195), wxSize(95, 65));
-	multiBUtton = new wxButton(this, 13, "x", wxPoint(310, 185), wxSize(60, 55));
-
-	oneBUtton = new wxButton(this, 14, "1", wxPoint(0, 265), wxSize(95, 65));
-	twoBUtton = new wxButton(this, 15, "2", wxPoint(100, 265), wxSize(95, 65));
-	threeBUtton = new wxButton(this, 16, "3", wxPoint(200, 265), wxSize(95, 65));
-	minusBUtton = new wxButton(this, 17, "-", wxPoint(310, 245), wxSize(60, 55));
-
-	modBUtton = new wxButton(this, 18, "Mod", wxPoint(0, 335), wxSize(95, 65));
-	zeroBUtton = new wxButton(this, 19, "0", wxPoint(100, 335), wxSize(95, 65));
-	dotBUtton = new wxButton(this, 20, ".", wxPoint(200, 335), wxSize(95, 65));
-	equalBUtton = new wxButton(this, 21, "=", wxPoint(310, 365), wxSize(60, 55));
-	plusBUtton = new wxButton(this, 22, "+", wxPoint(310, 305), wxSize(60, 55));
+	
 }
 
-std::vector<wxButton*> ButtonFactory::Buttons()
+wxButton* ButtonFactory::NineButton(wxFrame* _parent)
 {
-	std::vector<wxButton*> v;
-	v.push_back(nineBUtton);
-	v.push_back(eightBUtton);
-	v.push_back(sevenBUtton);
-	v.push_back(sixBUtton);
-	v.push_back(fiveBUtton);
-	v.push_back(fourBUtton);
-	v.push_back(threeBUtton);
-	v.push_back(twoBUtton);
-	v.push_back(oneBUtton);
-	v.push_back(zeroBUtton);
-	v.push_back(cosBUtton);
-	v.push_back(tanBUtton);
-	v.push_back(sinBUtton);
-	v.push_back(clearBUtton);
-	v.push_back(backBUtton);
-	v.push_back(divideBUtton);
-	v.push_back(multiBUtton);
-	v.push_back(minusBUtton);
-	v.push_back(plusBUtton);
-	v.push_back(equalBUtton);
-	v.push_back(modBUtton);
-	v.push_back(dotBUtton);
-	return v;
+	return new wxButton(_parent, 8, "9", wxPoint(200, 125), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::NineButton()
+wxButton* ButtonFactory::EightButton(wxFrame* _parent)
 {
-	return nineBUtton;
+	return new wxButton(_parent, 7, "8", wxPoint(100, 125), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::EightButton()
+wxButton* ButtonFactory::SevenButton(wxFrame* _parent)
 {
-	return eightBUtton;
+	return new wxButton(_parent, 6, "7", wxPoint(0, 125), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::SevenButton()
+wxButton* ButtonFactory::SixButton(wxFrame* _parent)
 {
-	return sevenBUtton;
+	return new wxButton(_parent, 12, "6", wxPoint(200, 195), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::SixButton()
+wxButton* ButtonFactory::FiveButton(wxFrame* _parent)
 {
-	return sixBUtton;
+	return new wxButton(_parent, 11, "5", wxPoint(100, 195), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::FiveButton()
+wxButton* ButtonFactory::FourButton(wxFrame* _parent)
 {
-	return fiveBUtton;
+	return new wxButton(_parent, 10, "4", wxPoint(0, 195), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::FourButton()
+wxButton* ButtonFactory::ThreeButton(wxFrame* _parent)
 {
-	return fourBUtton;
+	return new wxButton(_parent, 16, "3", wxPoint(200, 265), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::ThreeButton()
+wxButton* ButtonFactory::TwoButton(wxFrame* _parent)
 {
-	return threeBUtton;
+	return new wxButton(_parent, 15, "2", wxPoint(100, 265), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::TwoButton()
+wxButton* ButtonFactory::OneButton(wxFrame* _parent)
 {
-	return twoBUtton;
+	return new wxButton(_parent, 14, "1", wxPoint(0, 265), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::OneButton()
+wxButton* ButtonFactory::ZeroButton(wxFrame* _parent)
 {
-	return oneBUtton;
+	return new wxButton(_parent, 19, "0", wxPoint(100, 335), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::ZeroButton()
+wxButton* ButtonFactory::CosButton(wxFrame* _parent)
 {
-	return zeroBUtton;
+	return new wxButton(_parent, 1, "Cos", wxPoint(0, 60), wxSize(70, 55));
 }
 
-wxButton* ButtonFactory::CosButton()
+wxButton* ButtonFactory::SinButton(wxFrame* _parent)
 {
-	return cosBUtton;
+	return new wxButton(_parent, 2, "Sin", wxPoint(75, 60), wxSize(70, 55));
 }
 
-wxButton* ButtonFactory::SinButton()
+wxButton* ButtonFactory::TanButton(wxFrame* _parent)
 {
-	return sinBUtton;
+	return new wxButton(_parent, 3, "Tan", wxPoint(150, 60), wxSize(70, 55));
 }
 
-wxButton* ButtonFactory::TanButton()
+wxButton* ButtonFactory::ClearButton(wxFrame* _parent)
 {
-	return tanBUtton;
+	return new wxButton(_parent, 4, "C", wxPoint(225, 60), wxSize(70, 55));
 }
 
-wxButton* ButtonFactory::ClearButton()
+wxButton* ButtonFactory::BackButton(wxFrame* _parent)
 {
-	return clearBUtton;
+	return new wxButton(_parent, 5, "<x", wxPoint(310, 60), wxSize(60, 55));
 }
 
-wxButton* ButtonFactory::BackButton()
+wxButton* ButtonFactory::DivideButton(wxFrame* _parent)
 {
-	return backBUtton;
+	return new wxButton(_parent, 9, "/", wxPoint(310, 125), wxSize(60, 55));
 }
 
-wxButton* ButtonFactory::DivideButton()
+wxButton* ButtonFactory::MultiButton(wxFrame* _parent)
 {
-	return divideBUtton;
+	return new wxButton(_parent, 13, "x", wxPoint(310, 185), wxSize(60, 55));
 }
 
-wxButton* ButtonFactory::MultiButton()
+wxButton* ButtonFactory::MinusButton(wxFrame* _parent)
 {
-	return multiBUtton;
+	return new wxButton(_parent, 17, "-", wxPoint(310, 245), wxSize(60, 55));
 }
 
-wxButton* ButtonFactory::MinusButton()
+wxButton* ButtonFactory::PlusButton(wxFrame* _parent)
 {
-	return minusBUtton;
+	return new wxButton(_parent, 22, "+", wxPoint(310, 305), wxSize(60, 55));
 }
 
-wxButton* ButtonFactory::PlusButton()
+wxButton* ButtonFactory::EqualButton(wxFrame* _parent)
 {
-	return plusBUtton;
+	return new wxButton(_parent, 21, "=", wxPoint(310, 365), wxSize(60, 55));
 }
 
-wxButton* ButtonFactory::EqualButton()
+wxButton* ButtonFactory::ModButton(wxFrame* _parent)
 {
-	return equalBUtton;
+	return new wxButton(_parent, 18, "Mod", wxPoint(0, 335), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::ModButton()
+wxButton* ButtonFactory::DotButton(wxFrame* _parent)
 {
-	return modBUtton;
+	return new wxButton(_parent, 20, ".", wxPoint(200, 335), wxSize(95, 65));
 }
 
-wxButton* ButtonFactory::DotButton()
-{
-	return dotBUtton;
-}
 
-wxTextCtrl* ButtonFactory::TextBox()
-{
-	return textBoX;
-}
 

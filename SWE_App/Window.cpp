@@ -30,8 +30,30 @@ wxEND_EVENT_TABLE()
 Window::Window() : 
 	wxFrame(nullptr, 0, "Calculator", wxPoint(400,200), wxSize(400,460))
 {
-	textBox = factory->TextBox();
-	
+	textBox = new wxTextCtrl(this, 23, "", wxPoint(0, 0), wxSize(400, 55));
+
+	nineButton = factory->NineButton(this);
+	eightButton = factory->EightButton(this);
+	sevenButton = factory->SevenButton(this);
+	sixButton = factory->SixButton(this);
+	fiveButton = factory->FiveButton(this);
+	fourButton = factory->FourButton(this);
+	threeButton = factory->ThreeButton(this);
+	twoButton	 = factory->TwoButton(this);
+	oneButton = factory->OneButton(this);
+	zeroButton = factory->ZeroButton(this);
+	cosButton = factory->CosButton(this);
+	sinButton = factory->SinButton(this);
+	tanButton = factory->TanButton(this);
+	multiButton = factory->MultiButton(this);
+	divideButton = factory->DivideButton(this);
+	minusButton = factory->MinusButton(this);
+	plusButton = factory->PlusButton(this);
+	clearButton = factory->ClearButton(this);
+	backButton = factory->BackButton(this);
+	equalButton = factory->EqualButton(this);
+	dotButton = factory->DotButton(this);
+	modButton = factory->ModButton(this);
 	
 }
 

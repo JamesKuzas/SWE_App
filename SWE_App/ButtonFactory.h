@@ -29,29 +29,28 @@ class ButtonFactory :public wxFrame
 	
 public:
 	ButtonFactory();
-	std::vector<wxButton*> Buttons();
-	wxButton* NineButton();
-	wxButton* EightButton();
-	wxButton* SevenButton();
-	wxButton* SixButton();
-	wxButton* FiveButton();
-	wxButton* FourButton();
-	wxButton* ThreeButton();
-	wxButton* TwoButton();
-	wxButton* OneButton();
-	wxButton* ZeroButton();
-	wxButton* CosButton();
-	wxButton* SinButton();
-	wxButton* TanButton();
-	wxButton* ClearButton();
-	wxButton* BackButton();
-	wxButton* DivideButton();
-	wxButton* MultiButton();
-	wxButton* MinusButton();
-	wxButton* PlusButton();
-	wxButton* EqualButton();
-	wxButton* ModButton();
-	wxButton* DotButton();
-	wxTextCtrl* TextBox();
+	wxButton* NineButton(wxFrame* _parent);
+	wxButton* EightButton(wxFrame* _parent);
+	wxButton* SevenButton(wxFrame* _parent);
+	wxButton* SixButton(wxFrame* _parent);
+	wxButton* FiveButton(wxFrame* _parent);
+	wxButton* FourButton(wxFrame* _parent);
+	wxButton* ThreeButton(wxFrame* _parent);
+	wxButton* TwoButton(wxFrame* _parent);
+	wxButton* OneButton(wxFrame* _parent);
+	wxButton* ZeroButton(wxFrame* _parent);
+	wxButton* CosButton(wxFrame* _parent);
+	wxButton* SinButton(wxFrame* _parent);
+	wxButton* TanButton(wxFrame* _parent);
+	wxButton* ClearButton(wxFrame* _parent);
+	wxButton* BackButton(wxFrame* _parent);
+	wxButton* DivideButton(wxFrame* _parent);
+	wxButton* MultiButton(wxFrame* _parent);
+	wxButton* MinusButton(wxFrame* _parent);
+	wxButton* PlusButton(wxFrame* _parent);
+	wxButton* EqualButton(wxFrame* _parent);
+	wxButton* ModButton(wxFrame* _parent);
+	wxButton* DotButton(wxFrame* _parent);
+	
 };
 
