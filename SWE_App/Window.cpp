@@ -153,7 +153,8 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		textBox->Clear();
 		break;
 
-	case 18:
+	case 18://Mod
+
 		break;
 	case 19:
 		textBox->AppendText("0");
