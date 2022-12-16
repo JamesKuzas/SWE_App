@@ -51,6 +51,5 @@ public:
 	wxButton* EqualButton(wxFrame* _parent);
 	wxButton* ModButton(wxFrame* _parent);
 	wxButton* DotButton(wxFrame* _parent);
-	
 };
 
