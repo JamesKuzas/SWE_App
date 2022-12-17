@@ -6,8 +6,8 @@ class CalculatorProcessor
 private:
 	static CalculatorProcessor* _processor;
 	std::vector<std::string> _math;
-	CalculatorProcessor();
+	CalculatorProcessor() {}
 public:
-	CalculatorProcessor();
+	static CalculatorProcessor* GetInstance();
 };
 
