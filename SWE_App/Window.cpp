@@ -1,4 +1,5 @@
 #include "Window.h"
+#include "CalculatorProcessor.h"
 
 wxBEGIN_EVENT_TABLE(Window, wxFrame)
 

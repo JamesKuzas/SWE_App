@@ -5,9 +5,10 @@ class CalculatorProcessor
 {
 private:
 	static CalculatorProcessor* _processor;
-	std::vector<std::string> _math;
 	CalculatorProcessor() {}
 public:
 	static CalculatorProcessor* GetInstance();
+	void DoMath(std::string _math);
+	
 };
 
