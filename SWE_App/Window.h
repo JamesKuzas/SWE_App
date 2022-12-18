@@ -1,6 +1,7 @@
 #pragma once
 #include "wx/wx.h"
 #include "ButtonFactory.h"
+#include "CalculatorProcessor.h"
 
 class Window :public wxFrame
 {
@@ -30,6 +31,8 @@ class Window :public wxFrame
 	wxButton* dotButton = nullptr;
 	wxTextCtrl* textBox = nullptr;
 
+	CalculatorProcessor* c1 = CalculatorProcessor::GetInstance();
+	
 	float f = false;
 	float answer = NULL;
 	float first = NULL;
@@ -39,7 +42,10 @@ class Window :public wxFrame
 	bool divide = false;
 	bool multiply = false;
 	wxString value = "";
+	std::string conversion = "";
 	wxString answerString;
+	std::vector<std::string> vect;
+	std::string dude = "";
 	
 
 public:

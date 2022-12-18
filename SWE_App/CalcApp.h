@@ -3,7 +3,7 @@
 #include "Window.h"
 
 
-class App : public wxApp
+class CalcApp : public wxApp
 {
 	Window* window = nullptr;
 

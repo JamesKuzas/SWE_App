@@ -12,85 +12,33 @@ CalculatorProcessor* CalculatorProcessor::GetInstance()
 
 void CalculatorProcessor::DoMath(std::string _math)
 {
-	std::string nums;
-	std::string variabls;
-	for (int i = 0; i < _math.size(); i++)
+	
+	
+	for (int i = 0; i < _math.length(); i++)
 	{
-		if (_math.find("*") != std::string::npos || _math.find("/") != std::string::npos)
+		if (_math[i] == '*' || _math[i] == '/' || _math[i] == '-' || _math[i] == '+')
 		{
-
-		}
-		else if (_math.find("*") != std::string::npos || _math.find("/") != std::string::npos)
-		{
-
+			tokenz.push_back(nums);
+			nums.clear();
+			variabls.push_back(_math[i]);
+			tokenz.push_back(variabls);
+			variabls.clear();
+			
 		}
 		else
 		{
-
+			nums.push_back(_math[i]);
 		}
 	}
+}
 
-
-
-
-
-
-
-
-	if (_math.find("+") != std::string::npos)
+float CalculatorProcessor::Pemdas(std::vector<std::string> _vector)
+{
+	for (int i = 0; i < _vector.size(); i++)
 	{
-		int pos = _math.find("+");
-		// Left sub string 
-		std::string plusleft;
-		// Right sub string
-		std::string plusright;
-		// call DoMath on left and right
-		DoMath(plusleft);
-		DoMath(plusright);
-		//left + right
-		//return awnser as string
+		
 	}
-	if (_math.find("-") != std::string::npos)
-	{
-		int pos = _math.find("-");
-		// Left sub string 
-		std::string minusleft;
-		// Right sub string
-		std::string minusright;
-		// call DoMath on left and right
-		DoMath(minusleft);
-		DoMath(minusright);
-		//left + right
-		//return awnser as string
-	}
-
-	if (_math.find("*") != std::string::npos)
-	{
-		int pos = _math.find("*");
-		// Left sub string 
-		std::string multileft;
-		// Right sub string
-		std::string multiright;
-		// call DoMath on left and right
-		DoMath(multileft);
-		DoMath(multiright);
-		//left + right
-		//return awnser as string
-	}
-
-	if (_math.find("/") != std::string::npos)
-	{
-		int pos = _math.find("/");
-		// Left sub string 
-		std::string divleft;
-		// Right sub string
-		std::string divright;
-		// call DoMath on left and right
-		DoMath(divleft);
-		DoMath(divright);
-		//left + right
-		//return awnser as string
-	}
-
+	
+	return answer;
 }
 
