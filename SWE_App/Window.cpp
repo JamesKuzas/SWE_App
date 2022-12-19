@@ -110,13 +110,13 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		break;
 	case 9://Divide
 
-		textBox->AppendText("/");
+		//textBox->AppendText("/");
 		
-		/*divide = true;
+		divide = true;
 		value = textBox->GetValue();
 		first = wxAtof(value);
 		value = "";
-		textBox->Clear();*/
+		textBox->Clear();
 		break;
 	case 10:
 		textBox->AppendText("4");
@@ -128,13 +128,13 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		textBox->AppendText("6");
 		break;
 	case 13://Multiply
-		textBox->AppendText("*");
+		//textBox->AppendText("*");
 
-		/*multiply = true;
+		multiply = true;
 		value = textBox->GetValue();
 		first = wxAtof(value);
 		value = "";
-		textBox->Clear();*/
+		textBox->Clear();
 		break;
 	case 14:
 		textBox->AppendText("1");
@@ -146,13 +146,13 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		textBox->AppendText("3");
 		break;
 	case 17://Subtract
-		textBox->AppendText("-");
+		//textBox->AppendText("-");
 
-		/*minus = true;
+		minus = true;
 		value = textBox->GetValue();
 		first = wxAtof(value);
 		value = "";
-		textBox->Clear();*/
+		textBox->Clear();
 		break;
 
 	case 18://Mod
@@ -166,6 +166,8 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		break;
 	case 21:// Equal
 		value = textBox->GetValue();
+		second = wxAtof(value);
+		/*value = textBox->GetValue();
 		conversion = value;
 		for (int i = 0; i < conversion.length(); i++)
 		{
@@ -175,10 +177,10 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		c1->Pemdas(vect);
 		dude = vect.size();
 		textBox->Clear();
-		textBox->AppendText(dude);
+		textBox->AppendText(dude);*/
 
 
-		/*if (plus == true)
+		if (plus == true)
 		{
 			answer = first + second;
 			answerString << answer;
@@ -225,7 +227,7 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 			first = NULL;
 			second = NULL;
 			divide = false;
-		}*/
+		}
 		
 		break;
 	case 22://ADD
