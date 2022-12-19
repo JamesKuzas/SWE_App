@@ -156,7 +156,13 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		break;
 
 	case 18://Mod
-
+		mod = true;
+		value = textBox->GetValue();
+		first = wxAtof(value);
+		answer = first - first * 2;
+		answerString << answer;
+		textBox->Clear();
+		textBox->AppendText(answerString);
 		break;
 	case 19:
 		textBox->AppendText("0");
@@ -178,7 +184,6 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 		dude = vect.size();
 		textBox->Clear();
 		textBox->AppendText(dude);*/
-
 
 		if (plus == true)
 		{
@@ -229,6 +234,7 @@ void Window::OnButtonClick(wxCommandEvent& evt)
 			divide = false;
 		}
 		
+		
 		break;
 	case 22://ADD
 		textBox->AppendText("+");
@@ -261,3 +267,5 @@ float Window::TanProblem(float _value)
 	float t = tan(_value);
 	return t;
 }
+
+

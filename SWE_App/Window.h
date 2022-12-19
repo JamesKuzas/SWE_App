@@ -37,6 +37,7 @@ class Window :public wxFrame
 	float answer = NULL;
 	float first = NULL;
 	float second = NULL;
+	bool mod = false;
 	bool plus = false;
 	bool minus = false;
 	bool divide = false;
@@ -54,6 +55,7 @@ public:
 	float CosProblem(float _value);
 	float SinProblem(float _value);
 	float TanProblem(float _value);
+	
 	wxDECLARE_EVENT_TABLE();
 };
 
